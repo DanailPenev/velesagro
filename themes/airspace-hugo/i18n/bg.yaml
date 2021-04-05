@@ -1,0 +1,44 @@
+- id: 404_go_home
+  translation: Към началната страница
+- id: 404_message
+  translation: Тази страница не съществува.
+- id: address_title
+  translation: Адрес
+- id: all
+  translation: Всички
+- id: buy_now
+  translation: Купи сега
+- id: categories
+  translation: Категории
+- id: contact_form_email
+  translation: Вашият имейл адрес
+- id: contact_form_message
+  translation: Съобщение
+- id: contact_form_name
+  translation: Вашето име
+- id: contact_form_subject
+  translation: Относно
+- id: email
+  translation: Имейл
+- id: faq_toc_title
+  translation: Съдържание
+- id: last_update
+  translation: Последно обновено
+- id: latest_posts
+  translation: Последни публикации
+- id: location
+  translation: Местоположение
+- id: page_next
+  translation: По-стари
+- id: page_prev
+  translation: По-нови
+- id: phone
+  translation: Телефон
+- id: posted_by
+  translation: Публикувано от
+- id: read_more
+  translation: Продължи четенето
+- id: submit
+  translation: Изпрати съобщение
+- id: tags
+  translation: Тагове

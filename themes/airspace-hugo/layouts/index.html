@@ -1,0 +1,170 @@
+{{ define "main" }}
+
+<!-- banner -->
+{{ with .Params.banner }}
+{{ if .enable }}
+<section class="slider {{if .bg_overlay}}overly{{end}}" style="background-image: url('{{ .bg_image | absURL }}');">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1>{{ .title | markdownify }}</h1>
+          <p>{{ .content | markdownify }}</p>
+          {{ if .button.enable }}
+          {{ with .button }}
+          <a href="{{ .link | relLangURL }}" target="_blank" class="btn btn-main animated fadeInUp">{{ .label }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+<!-- /banner -->
+
+{{ with .Params.about }}
+{{ if .enable }}
+<!-- about -->
+<section class="about section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 col-sm-12">
+        <div class="block">
+          <div class="section-title">
+            <h2>{{ .title | markdownify }}</h2>
+            <p>{{ .description | markdownify }}</p>
+          </div>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </div>
+      <div class="col-md-5 col-sm-12">
+        <div class="block">
+          <img src="{{ .image | relURL }}" class="img-responsive" alt="Img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+{{ end }}
+{{ end }}
+
+{{ with .Params.portfolio }}
+{{ if .enable }}
+<!-- portfolio -->
+<section class="feature bg-2" style="background-image: url('{{ .bg_image | absURL}}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-6">
+        <h2 class="section-subtitle">{{ .title | markdownify }}</h2>
+        {{ .content | markdownify }}
+        {{ if .button.enable }}
+        {{ with .button }}
+        <a href="{{ .link | relLangURL }}" class="btn btn-view-works">{{ .label }}</a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /portfolio -->
+{{ end }}
+{{ end }}
+
+<!-- Service -->
+{{ if .Params.service.enable }}
+{{ partial "service.html" . }}
+{{ end }}
+<!-- /service -->
+
+<!-- Call to action -->
+{{ if .Params.cta.enable }}
+{{ partial "cta.html" . }}
+{{ end }}
+<!-- /Call to action -->
+
+{{ with .Params.funfacts }}
+{{ if .enable }}
+<!-- Content Start -->
+<section class="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center">
+        <h2>{{ .title | markdownify }}</h2>
+        <p>{{ .description | markdownify }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="block">
+          <ul class="counter-box clearfix">
+            {{ range .funfact_item }}
+            <li class="counter-item">
+              <i class="{{ .icon }}"></i>
+              <h4 class="count" data-count="{{ .count }}">0</h4>
+              <span>{{ .name | markdownify }}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-5 col-md-offset-1">
+        <div class="testimonial-carousel text-center">
+          <div class="testimonial-slider owl-carousel">
+            {{ range .testimonial_slider }}
+            <div>
+              <i class="ion-quote"></i>
+              <p>"{{ .content | markdownify }}"</p>
+              <div class="user">
+                <img src="{{ .image | relURL }}" alt="client">
+                <p><span>{{ .name | markdownify }}</span> {{ .designation | markdownify }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end}}
+{{ end}}
+
+{{ with .Params.contact }}
+<section id="contact" class="contact-form">
+  <div class="container">
+    <div class="contact-box row">
+      {{ with site.Params.contact }}
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <h2>{{ i18n "address_title" }}</h2>
+          <ul class="address-block">
+            {{ if isset . "location" }}<li><i class="ion-ios-location-outline"></i>{{ if .address_descriptors }}{{ i18n "location" | printf "%s: " }}{{ end }}{{ .location }}</li>{{ end }}
+            {{ if isset . "email" }}<li><i class="ion-ios-email-outline"></i>{{ if .address_descriptors }}{{ i18n "email" | printf "%s: " }}{{ end }}{{ .email }}</li>{{ end }}
+            {{ if isset . "phone" }}<li><i class="ion-ios-telephone-outline"></i>{{ if .address_descriptors }}{{ i18n "phone" | printf "%s: " }}{{ end }}{{ .phone }}</li>{{ end }}
+          </ul>
+          <ul class="social-icons">
+            {{ range site.Params.social }}
+            <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      {{ end }}
+      {{ if site.Params.gmap.enable }}
+      <div class="col-md-6 col-sm-12">
+        <div class="block">
+          <div class="google-map">
+            <div class="map" id="map" data-latitude="{{ site.Params.gmap.map_latitude }}" data-longitude="{{ site.Params.gmap.map_longitude }}" data-marker="{{ site.Params.gmap.map_marker | relURL }}" data-marker-name="{{ site.Title }}"></div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

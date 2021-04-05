@@ -1,0 +1,159 @@
+################################# Basic configuration #########################
+# Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
+baseURL = "http://velesagro.bg"
+title = "ВелесАгро БГ | Части за трактори"
+theme = "airspace-hugo"
+# Number of posts per page in list view
+paginate = "4"
+# Post excerpt length
+summaryLength = "30"
+# Disabled languages
+disableLanguages = []
+enableRobotsTXT = true
+# Measurement ID (G-XXXXXXX) to enable Google Analytics
+googleAnalytics = ""
+defaultContentLanguage = "bg"
+
+
+################################# Output formats ##############################
+# Documentation: https://gohugo.io/templates/output-formats/#customizing-output-formats
+
+[outputs]
+home = [ "HTML" ]
+
+
+################################# Markup ######################################
+# Documentation: https://gohugo.io/getting-started/configuration-markup
+
+[markup.goldmark.renderer]
+# Allow "unsafe" HTML in Markdown
+unsafe = true
+
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 6
+  ordered = false
+
+
+################################# Default parameters ##########################
+[params]
+logo = "images/logo.png"
+logo_width = "150px"
+# OpenGraph / Twitter Card metadata
+title = "Airspace Hugo Template"
+description = "This is meta description"
+author = "Themefisher"
+images = [ "images/logo.png" ] # First image here will be used as fallback if a page has no images of its own
+
+
+################################# Contact page ################################
+[params.contact]
+# Address block
+phone = "0124857985320"
+email = "g.stoyanov@velesagro.bg"
+location = "Стожер, България"
+# Whether to display text descriptors (like "E-mail: ", "Phone: ") before the address block elements
+address_descriptors = true
+
+
+################################# Google map ##################################
+[params.gmap]
+enable = true
+gmap_api = "AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
+map_latitude = "43.427490"
+map_longitude = "27.823938"
+map_marker = "images/marker.png"
+
+
+################################# Preloader ###################################
+[params.preloader]
+enable = true
+preloader = "" # use .png , .svg or .gif image
+
+
+################################# Cookies #####################################
+[params.cookies]
+enable = true
+expire_days = 2
+
+
+################################# Social Media ################################
+[[params.social]]
+icon = "ion-social-linkedin-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
+
+[[params.social]]
+icon = "ion-social-instagram-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
+
+[[params.social]]
+icon = "ion-social-twitter-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
+
+[[params.social]]
+icon = "ion-social-facebook-outline" #ionicon pack v2 : https://ionicons.com/v2/
+link = "#"
+
+
+################################# Plugins #####################################
+[[params.plugins.js]]
+link = "plugins/google-map/gmap.js"
+attributes = "defer"
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/css/bootstrap.min.css"
+attributes = "media='screen'"
+
+[[params.plugins.css]]
+link = "plugins/ionicons/css/ionicons.min.css"
+attributes = ""
+
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.min.css"
+attributes = ""
+
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+attributes = ""
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/bootstrap/js/bootstrap.min.js"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/magnific-popup/magnific-popup.min.js"
+attributes = ""
+
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+attributes = ""
+
+
+################################# bulgarian translation #########################
+[languages.bg]
+languageName = "Bulgarian"
+languageCode = "bg-BG"
+contentDir = "content/bulgarian"
+weight = 1
+copyright = "Всички права запазени &copy; 2021 ВелесАгро БГ"
+
+# Main menu
+[[languages.bg.menu.main]]
+name = "Начало"
+URL = "/"
+weight = 1
+
+[[languages.bg.menu.main]]
+name = "Контакти"
+URL = "#contact"
+weight = 6
