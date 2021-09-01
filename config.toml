@@ -49,8 +49,8 @@ images = [ "images/logo.png" ] # First image here will be used as fallback if a 
 ################################# Contact page ################################
 [params.contact]
 # Address block
-phone = "0124857985320"
-email = "g.stoyanov@velesagro.bg"
+phone = "0879/008838"
+email = "office@velesagro.bg"
 location = "Стожер, България"
 # Whether to display text descriptors (like "E-mail: ", "Phone: ") before the address block elements
 address_descriptors = true
@@ -79,20 +79,8 @@ expire_days = 2
 
 ################################# Social Media ################################
 [[params.social]]
-icon = "ion-social-linkedin-outline" #ionicon pack v2 : https://ionicons.com/v2/
-link = "#"
-
-[[params.social]]
-icon = "ion-social-instagram-outline" #ionicon pack v2 : https://ionicons.com/v2/
-link = "#"
-
-[[params.social]]
-icon = "ion-social-twitter-outline" #ionicon pack v2 : https://ionicons.com/v2/
-link = "#"
-
-[[params.social]]
 icon = "ion-social-facebook-outline" #ionicon pack v2 : https://ionicons.com/v2/
-link = "#"
+link = "https://www.facebook.com/VELES-AGRO-BG-107981974921403/"
 
 
 ################################# Plugins #####################################
