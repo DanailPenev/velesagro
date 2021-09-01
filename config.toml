@@ -1,6 +1,6 @@
 ################################# Basic configuration #########################
 # Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-baseURL = "velesagro.github.io"
+baseURL = "danailpenev.github.io/velesagro"
 relativeURLs = true
 canonifyURLs = true
 title = "ВелесАгро БГ | Части за трактори"
