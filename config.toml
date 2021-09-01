@@ -53,7 +53,7 @@ images = [ "images/logo.png" ] # First image here will be used as fallback if a 
 # Address block
 phone = "0879/008838"
 email = "office@velesagro.bg"
-location = "Стожер, България"
+location = "ул. Опълченска 78А, Стожер, България"
 # Whether to display text descriptors (like "E-mail: ", "Phone: ") before the address block elements
 address_descriptors = true
 
