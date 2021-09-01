@@ -1,6 +1,8 @@
 ################################# Basic configuration #########################
 # Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-baseURL = "http://velesagro.bg"
+baseURL = "velesagro.github.io"
+relativeURLs = true
+canonifyURLs = true
 title = "ВелесАгро БГ | Части за трактори"
 theme = "airspace-hugo"
 # Number of posts per page in list view
