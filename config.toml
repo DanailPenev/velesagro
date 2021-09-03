@@ -3,7 +3,7 @@
 baseURL = ""
 relativeURLs = true
 canonifyURLs = true
-title = "ВелесАгро БГ | Части за трактори"
+title = "ВелесАгро БГ | Техника за вашето поле"
 theme = "airspace-hugo"
 # Number of posts per page in list view
 paginate = "4"
@@ -12,6 +12,8 @@ summaryLength = "30"
 # Disabled languages
 disableLanguages = []
 enableRobotsTXT = true
+keywords = "земеделска техника, зърнотоварачи, пръскачки, резервни части, хедери, саморазтоварващи ремаркета, машини, поле, техника, земеделие"
+description = "земеделски машини и техника за вашето поле"
 # Measurement ID (G-XXXXXXX) to enable Google Analytics
 googleAnalytics = ""
 defaultContentLanguage = "bg"
