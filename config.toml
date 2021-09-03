@@ -64,7 +64,7 @@ enable = true
 gmap_api = "AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"
 map_latitude = "43.427490"
 map_longitude = "27.823938"
-map_marker = "images/marker.png"
+map_marker = "./images/marker.png"
 
 
 ################################# Preloader ###################################
